@@ -13,8 +13,8 @@ const getGenreById = async (request, response) => {
     where: { id },
     include: [{
       model: models.Novels,
-      include: [{ model: models.Authors }]
-    }]
+      include: [{ model: models.Authors }],
+    }],
   })
 
   return genre
