@@ -14,12 +14,12 @@ const getAuthorByIdOrName = async (request, response) => {
       [models.Sequelize.Op.or]: [
         { id: identifier },
         { nameLast: { [models.Sequelize.Op.like]: `%${identifier}%` } },
-      ]
+      ],
     },
     include: [{
       model: models.Novels,
-      include: [{ model: models.Genres }]
-    }]
+      include: [{ model: models.Genres }],
+    }],
   })
 
   return author

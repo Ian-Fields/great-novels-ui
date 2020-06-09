@@ -131,5 +131,5 @@ module.exports = {
     await queryInterface.bulkDelete('authors')
 
     return queryInterface.bulkDelete('genres')
-  }
+  },
 }
